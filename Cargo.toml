@@ -1,0 +1,21 @@
+[package]
+name = "rfid_reader"
+version = "0.1.0"
+authors = ["Martin Kiefel <mk@nopw.de>"]
+edition = "2018"
+
+[features]
+examples = ["futures", "futures-timer"]
+
+[dependencies]
+hidapi = "1.0.1"
+quick-error = "1.2.3"
+futures = { version = "0.3.4", optional = true }
+futures-timer = { version = "3.0.2", optional = true }
+
+[[example]]
+name = "poll"
+
+[[example]]
+name = "wait"
+required-features = ["examples"]
